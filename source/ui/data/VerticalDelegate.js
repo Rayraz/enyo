@@ -641,8 +641,8 @@
 		* @private
 		*/
 		height: function (list) {
-			if (list._updateBounds) { this.updateBounds(list); }
-			return list.boundsCache.height;
+    			if (list._updateBounds) { this.updateBounds(list); }
+    			return list.boundsCache ? list.boundsCache.height : undefined;
 		},
 
 		/**
@@ -652,8 +652,8 @@
 		* @private
 		*/
 		width: function (list) {
-			if (list._updateBounds) { this.updateBounds(list); }
-			return list.boundsCache.width;
+    			if (list._updateBounds) { this.updateBounds(list); }
+    			return list.boundsCache ? list.boundsCache.width : undefined;
 		},
 
 		/**
